@@ -1,0 +1,22 @@
+<form [formGroup]="weatherForm" (ngSubmit)="getWeather()">
+  <div class="input">
+    <input
+      type="text"
+      class="inputValue"
+      placeholder="Enter a City"
+      formControlName="city"
+    /><br />
+    <input
+      [ngStyle]="{ marginTop: '5px' }"
+      type="submit"
+      class=" submit"
+    />
+  </div>
+</form>
+<div class="display">
+  <h1>{{ cityName }}</h1>
+  <p>{{ cityDesc }}</p>
+  <p *ngIf="cityTemp" [ngStyle]="{ background: '#ccc' }">
+    {{ cityTemp }} &deg;C
+  </p>
+</div>
