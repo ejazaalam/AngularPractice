@@ -29,7 +29,7 @@ export class WeatherComponent implements OnInit {
         this.mapData(res);
       },
       err => {
-        console.error("getWeather API error: ", err);
+        alert(this.weatherForm.value.city + " is not a City Name" );
       }
     )
   }
